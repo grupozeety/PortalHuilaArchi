@@ -78,8 +78,6 @@
     <element xsi:type="archimate:ApplicationComponent" id="d5ceddc7" name="sistema de Planificación de Recursos Empresariales"/>
     <element xsi:type="archimate:ApplicationCollaboration" id="f60e3f8d" name="Application Collaboration"/>
     <element xsi:type="archimate:ApplicationCollaboration" id="56b20428" name="Interoperabilidad"/>
-    <element xsi:type="archimate:ApplicationComponent" id="0006c449" name="Red Social"/>
-    <element xsi:type="archimate:ApplicationComponent" id="42fc2e10" name="Geosite"/>
   </folder>
   <folder name="Technology" id="e809b323" type="technology">
     <folder name="Behaviour" id="7947d467"/>
@@ -94,12 +92,6 @@
     <element xsi:type="archimate:SystemSoftware" id="feb629f5" name="Joomla!"/>
     <element xsi:type="archimate:Node" id="5ecf2fb3" name="Instancia IdP"/>
     <element xsi:type="archimate:SystemSoftware" id="0cad9674" name="LinOTP"/>
-    <element xsi:type="archimate:Device" id="2baf1584" name="Móvil"/>
-    <element xsi:type="archimate:Device" id="3edb5b0d" name="Escritorio"/>
-    <element xsi:type="archimate:SystemSoftware" id="8e2707fa" name="ErpNext"/>
-    <element xsi:type="archimate:SystemSoftware" id="862725b9" name="Joomla"/>
-    <element xsi:type="archimate:SystemSoftware" id="29a341e3" name="LinOTP"/>
-    <element xsi:type="archimate:SystemSoftware" id="7273cbc9" name="PostgreSQL"/>
   </folder>
   <folder name="Motivation" id="73826f6a" type="motivation">
     <element xsi:type="archimate:Stakeholder" id="c831f051" name="INFIHUILA"/>
@@ -110,10 +102,6 @@
     <element xsi:type="archimate:Driver" id="ac7370ea" name="Cultura de Festividad"/>
     <element xsi:type="archimate:Driver" id="357859c1" name="Cultura de Servicio"/>
     <element xsi:type="archimate:Driver" id="34e986d2" name="Cultura de Destino"/>
-    <element xsi:type="archimate:Principle" id="7de6f5ef" name="Cooperación"/>
-    <element xsi:type="archimate:Principle" id="6688b3cc" name="Seguridad"/>
-    <element xsi:type="archimate:Principle" id="f3d250a0" name="Calidad"/>
-    <element xsi:type="archimate:Principle" id="5957b5dd" name="Pertinencia"/>
   </folder>
   <folder name="Implementation &amp; Migration" id="9f96f97c" type="implementation_migration"/>
   <folder name="Connectors" id="b1f62aa9" type="connectors"/>
@@ -561,6 +549,27 @@ Intention is to hold Technology layer, all aspects</content>
         <bounds x="24" y="24" width="253" height="61"/>
         <content>Punto de Vista: Estructura de Información</content>
       </child>
+      <child xsi:type="archimate:DiagramObject" id="8f9c5228" textAlignment="2" archimateElement="453d43a2">
+        <bounds x="312" y="132" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="85a00681" textAlignment="2" archimateElement="61d0a1fb">
+        <bounds x="120" y="132" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="01e588f5" textAlignment="2" archimateElement="ac7370ea">
+        <bounds x="120" y="204" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="0d399dea" textAlignment="2" archimateElement="357859c1">
+        <bounds x="120" y="276" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="08c49ee6" textAlignment="2" archimateElement="34e986d2">
+        <bounds x="120" y="348" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:Note" id="469a7c53" name="Note" textAlignment="1">
+        <bounds x="95" y="576" width="397" height="109"/>
+        <content>Referencias: 
+1. Keller, P. Management of Cultural Change in Tourism Regions and Communities, 2001
+2. Gretzel, U y otros. Smart tourism: foundations and developments. Institute of Information Management, University of St. Gallen, 2015</content>
+      </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000031" name="Punto de Vista: Realización del servicio">
       <child xsi:type="archimate:Note" id="00000032" name="Note" textAlignment="1">
@@ -577,70 +586,7 @@ Intention is to hold Technology layer, all aspects</content>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000035" name="Punto de Vista: Panorámico">
       <child xsi:type="archimate:Note" id="00000036" name="Note" textAlignment="1">
         <bounds x="24" y="24" width="169" height="85"/>
-        <content>Punto de Vista: Panorámico</content>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="b7dfe57d" textAlignment="2" archimateElement="453d43a2">
-        <bounds x="262" y="219" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="48f0b508" textAlignment="2" archimateElement="61d0a1fb">
-        <bounds x="106" y="219" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="406b31f1" textAlignment="2" archimateElement="ac7370ea">
-        <bounds x="106" y="291" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="eaf29629" textAlignment="2" archimateElement="357859c1">
-        <bounds x="106" y="363" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="a7b814bf" textAlignment="2" archimateElement="34e986d2">
-        <bounds x="106" y="435" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:Note" id="872bc895" name="Note" textAlignment="1">
-        <bounds x="480" y="600" width="397" height="109"/>
-        <content>Referencias: 
-1. Keller, P. Management of Cultural Change in Tourism Regions and Communities, 2001
-2. Gretzel, U y otros. Smart tourism: foundations and developments. Institute of Information Management, University of St. Gallen, 2015</content>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="7fb7cb6e" textAlignment="2" archimateElement="7de6f5ef">
-        <bounds x="108" y="120" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="408a6df4" textAlignment="2" archimateElement="6688b3cc">
-        <bounds x="238" y="120" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="1c843854" textAlignment="2" archimateElement="f3d250a0">
-        <bounds x="370" y="120" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="8d141b85" textAlignment="2" archimateElement="5957b5dd">
-        <bounds x="502" y="123" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="8765d3d5" textAlignment="2" archimateElement="52c09735">
-        <bounds x="420" y="219" width="120" height="73"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="80dcf5b3" textAlignment="2" archimateElement="d5ceddc7">
-        <bounds x="564" y="219" width="133" height="73"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="d3cfd8b1" textAlignment="2" archimateElement="0006c449">
-        <bounds x="420" y="309" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="118f1c94" textAlignment="2" archimateElement="42fc2e10">
-        <bounds x="571" y="312" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="e071c871" textAlignment="2" archimateElement="2baf1584">
-        <bounds x="744" y="219" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="8c7c2e2b" textAlignment="2" archimateElement="3edb5b0d">
-        <bounds x="744" y="312" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="4f4af287" textAlignment="2" archimateElement="8e2707fa">
-        <bounds x="420" y="381" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="940f85b4" textAlignment="2" archimateElement="862725b9">
-        <bounds x="577" y="381" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="f1256eed" textAlignment="2" archimateElement="29a341e3">
-        <bounds x="420" y="444" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="f2dfeaf4" textAlignment="2" archimateElement="7273cbc9">
-        <bounds x="577" y="444" width="120" height="55"/>
+        <content>Viewpoint: Landscape Map</content>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="6c573bb1" name="_Vistas">
