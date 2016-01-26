@@ -457,7 +457,7 @@ Intention is to hold Technology layer, all aspects</content>
         <content>Punto de Vista: Procesos de Negocio</content>
       </child>
       <child xsi:type="archimate:DiagramObject" id="7d78e813" textAlignment="2" archimateElement="64eb7f64">
-        <bounds x="552" y="216" width="144" height="397"/>
+        <bounds x="576" y="216" width="144" height="397"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="6c686323" textAlignment="2" archimateElement="72073f08">
         <bounds x="36" y="216" width="169" height="505"/>
@@ -496,10 +496,10 @@ Intention is to hold Technology layer, all aspects</content>
         <bounds x="444" y="131" width="433" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="4da56af4" textAlignment="2" archimateElement="b1f4bc17">
-        <bounds x="696" y="216" width="144" height="397"/>
+        <bounds x="733" y="216" width="144" height="397"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="00b9578e" textAlignment="2" archimateElement="e6162ac8">
-        <bounds x="840" y="216" width="157" height="397"/>
+        <bounds x="888" y="216" width="157" height="397"/>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000011" name="Punto de vista: Co-operación de procesos de negocio">
