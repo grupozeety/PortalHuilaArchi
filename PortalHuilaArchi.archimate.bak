@@ -21,7 +21,9 @@
     <element xsi:type="archimate:BusinessProcess" id="0f816bd4" name="Gestión de Turistas"/>
     <element xsi:type="archimate:BusinessProcess" id="7e27a10e" name="Gestión de MiPyMEs"/>
     <element xsi:type="archimate:BusinessActor" id="36f3fa78" name="Gobernación del Huila"/>
-    <element xsi:type="archimate:BusinessRole" id="c3326df7" name="Proveedor de Servicios Turísticos"/>
+    <element xsi:type="archimate:BusinessRole" id="c3326df7" name="Proveedor de Servicios Turísticos">
+      <documentation>Un proveedor de servicios turísticos es una MiPyME que ofrece servicios potencialmente útlies dentro de la cadena de valor turística.</documentation>
+    </element>
     <element xsi:type="archimate:BusinessRole" id="9b2cefe5" name="Proveedor de Servicios de Comida"/>
     <element xsi:type="archimate:BusinessRole" id="617ca755" name="Proveedor de Servicios de Tiendas de Compras"/>
     <element xsi:type="archimate:BusinessRole" id="aadb899b" name="Proveedor de Servicios de Acomodación"/>
@@ -60,6 +62,38 @@
     <element xsi:type="archimate:BusinessProcess" id="1b732b34" name="Distribución de Producto"/>
     <element xsi:type="archimate:BusinessProcess" id="eb5a976f" name="Entrega de producto"/>
     <element xsi:type="archimate:BusinessProcess" id="9b751cbb" name="Registro de Cliente"/>
+    <element xsi:type="archimate:BusinessProcess" id="49fb338b" name="Comunicación con el cliente"/>
+    <element xsi:type="archimate:BusinessProcess" id="ba2b8543" name="Gestionar Presupuesto"/>
+    <element xsi:type="archimate:BusinessFunction" id="bc521aed" name="Gestión de Almacén"/>
+    <element xsi:type="archimate:BusinessProcess" id="432fa631" name="Ingresar Elementos"/>
+    <element xsi:type="archimate:BusinessProcess" id="dbb06989" name="Salida de Elementos"/>
+    <element xsi:type="archimate:BusinessProcess" id="742fd32e" name="Registro de percepción de servicio"/>
+    <element xsi:type="archimate:BusinessProcess" id="e531b9f3" name="Planificar Viaje">
+      <documentation>El turista tiene la capacidad de planificar su viaje haciendo uso de los sistemas georreferenciados (mapas editables), a partir del trazado de rutas y  definición de nodos de viaje</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" id="415f87bc" name="Gestionar Itinerario">
+      <documentation>El turista tiene la capacidad de cambiar las rutas definidas, reconfigurar nodos de viaje y recuperar rutas anteriormente definidas.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" id="cc8969c7" name="Registrar Información de Viaje">
+      <documentation>El turista tiene la capacidad de registrar datos para atributos predefinidos de los nodos de viaje.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" id="8e98f9f2" name="Registrar Impresiones">
+      <documentation>El rol turista - usuario de servicios turisticos, tiene la capacidad de ingresar y compartir impresiones (comentarios, noticias, multimedia) en los diferentes nodos de viaje.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" id="caab36c9" name="Gestionar relaciones">
+      <documentation>Para agregar, bloquear, eliminar relaciones con otros turistas registrados.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" id="1117ca39" name="Comunicarse con relacionados"/>
+    <element xsi:type="archimate:BusinessProcess" id="72b0a401" name="Registro de Proveedores">
+      <documentation>Proceso de negocio que se encarga del registro de los diferentes proveedores de servicios turísticos para que puedan ser categorizados y gestionados. Por cada registro se crea el correspondiente documento de prsentación en Internet, el micrositio y la instancia de servicios ERP.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" id="ec565b4d" name="Gestión de información de Proveedor">
+      <documentation>La información del proveedor de servicios turísitcos se realzia por medio de dos mecanismos:
+
+* Información básica: Datos básicos del operador que incluye el nombre, identificación comercial y tributaria, ubicación, categoría y servicios principales.
+* Micrositio: Con información especializada por cada operador incluyendo catálogo de servicios, descripción de productos, características del negocio, ubicación específica de todas las sedes, galerías de imágenes, gestión de interacción con clientes.
+</documentation>
+    </element>
   </folder>
   <folder name="Application" id="05c823c1" type="application">
     <folder name="Behaviour" id="47f3256b"/>
@@ -163,6 +197,20 @@
     <element xsi:type="archimate:CompositionRelationship" id="7b167982" source="72073f08" target="1b732b34"/>
     <element xsi:type="archimate:CompositionRelationship" id="c82138f7" source="72073f08" target="eb5a976f"/>
     <element xsi:type="archimate:CompositionRelationship" id="32b9d312" source="52f25659" target="9b751cbb"/>
+    <element xsi:type="archimate:CompositionRelationship" id="aabe4c6f" source="52f25659" target="49fb338b"/>
+    <element xsi:type="archimate:CompositionRelationship" id="9e01dc4f" source="0535b3dc" target="ba2b8543"/>
+    <element xsi:type="archimate:CompositionRelationship" id="44cafa46" source="bc521aed" target="432fa631"/>
+    <element xsi:type="archimate:CompositionRelationship" id="292e2092" source="bc521aed" target="dbb06989"/>
+    <element xsi:type="archimate:CompositionRelationship" id="42c118c5" source="52f25659" target="742fd32e"/>
+    <element xsi:type="archimate:CompositionRelationship" id="28cd2318" source="64eb7f64" target="e531b9f3"/>
+    <element xsi:type="archimate:CompositionRelationship" id="d2db729a" source="64eb7f64" target="415f87bc"/>
+    <element xsi:type="archimate:CompositionRelationship" id="26f11448" source="64eb7f64" target="cc8969c7"/>
+    <element xsi:type="archimate:CompositionRelationship" id="219db1bb" source="64eb7f64" target="8e98f9f2"/>
+    <element xsi:type="archimate:CompositionRelationship" id="3bba8c56" source="b1f4bc17" target="8e98f9f2"/>
+    <element xsi:type="archimate:CompositionRelationship" id="70a7d64a" source="b1f4bc17" target="caab36c9"/>
+    <element xsi:type="archimate:CompositionRelationship" id="623b8b7b" source="b1f4bc17" target="1117ca39"/>
+    <element xsi:type="archimate:CompositionRelationship" id="dfbea72b" source="e6162ac8" target="72b0a401"/>
+    <element xsi:type="archimate:CompositionRelationship" id="5eceef2c" source="e6162ac8" target="ec565b4d"/>
   </folder>
   <folder name="Views" id="59b09918" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" id="5f78b078" name="__Vistas">
@@ -451,55 +499,97 @@ Intention is to hold Technology layer, all aspects</content>
         <content>Viewpoint: Business Function</content>
       </child>
     </element>
-    <element xsi:type="archimate:ArchimateDiagramModel" id="00000009" name="Punto de Vista: Procesos de Negocio">
+    <element xsi:type="archimate:ArchimateDiagramModel" id="00000009" name="Punto de Vista: Procesos de Negocio" viewpoint="17">
       <child xsi:type="archimate:Note" id="00000010" name="Note" textAlignment="1">
         <bounds x="24" y="24" width="169" height="85"/>
         <content>Punto de Vista: Procesos de Negocio</content>
       </child>
       <child xsi:type="archimate:DiagramObject" id="7d78e813" textAlignment="2" archimateElement="64eb7f64">
-        <bounds x="552" y="216" width="144" height="397"/>
+        <bounds x="720" y="204" width="169" height="277"/>
+        <child xsi:type="archimate:DiagramObject" id="23ee404d" textAlignment="2" archimateElement="e531b9f3">
+          <bounds x="24" y="60" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="b6845fcf" textAlignment="2" archimateElement="415f87bc">
+          <bounds x="24" y="132" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="2e633331" textAlignment="2" archimateElement="cc8969c7">
+          <bounds x="24" y="204" width="120" height="55"/>
+        </child>
       </child>
       <child xsi:type="archimate:DiagramObject" id="6c686323" textAlignment="2" archimateElement="72073f08">
-        <bounds x="36" y="216" width="169" height="505"/>
+        <bounds x="36" y="216" width="169" height="517"/>
         <child xsi:type="archimate:DiagramObject" id="e59eab89" textAlignment="2" archimateElement="9dee0a36">
-          <bounds x="24" y="72" width="120" height="55"/>
+          <bounds x="24" y="36" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="17a37ac1" textAlignment="2" archimateElement="aa1fa671">
-          <bounds x="24" y="144" width="120" height="55"/>
+          <bounds x="24" y="108" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="68966325" textAlignment="2" archimateElement="c24abdd4">
-          <bounds x="24" y="216" width="120" height="55"/>
+          <bounds x="24" y="180" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="b40b929f" textAlignment="2" archimateElement="9a13c87a">
-          <bounds x="24" y="288" width="120" height="55"/>
+          <bounds x="24" y="252" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="ee5ab287" textAlignment="2" archimateElement="1b732b34">
-          <bounds x="24" y="360" width="120" height="55"/>
+          <bounds x="24" y="324" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="4850a58f" textAlignment="2" archimateElement="eb5a976f">
-          <bounds x="24" y="432" width="120" height="55"/>
+          <bounds x="24" y="396" width="120" height="55"/>
         </child>
       </child>
       <child xsi:type="archimate:DiagramObject" id="2b45fe9d" textAlignment="2" archimateElement="52f25659">
-        <bounds x="228" y="216" width="144" height="397"/>
+        <bounds x="384" y="216" width="157" height="361"/>
         <child xsi:type="archimate:DiagramObject" id="0f211016" textAlignment="2" archimateElement="9b751cbb">
-          <bounds x="12" y="60" width="120" height="55"/>
+          <bounds x="24" y="48" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="40a254af" textAlignment="2" archimateElement="49fb338b">
+          <bounds x="24" y="120" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="0207f5fb" textAlignment="2" archimateElement="742fd32e">
+          <bounds x="24" y="192" width="120" height="55"/>
         </child>
       </child>
       <child xsi:type="archimate:DiagramObject" id="6fd3d520" textAlignment="2" archimateElement="0535b3dc">
-        <bounds x="408" y="216" width="144" height="397"/>
+        <bounds x="552" y="216" width="144" height="157"/>
+        <child xsi:type="archimate:DiagramObject" id="d485321e" textAlignment="2" archimateElement="ba2b8543">
+          <bounds x="12" y="72" width="120" height="55"/>
+        </child>
       </child>
       <child xsi:type="archimate:DiagramObject" id="ef127f7e" textAlignment="2" archimateElement="c3326df7">
-        <bounds x="36" y="131" width="384" height="55"/>
+        <bounds x="36" y="131" width="673" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="12961e29" textAlignment="2" archimateElement="28dbc124">
-        <bounds x="444" y="131" width="433" height="55"/>
+        <bounds x="720" y="131" width="577" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="4da56af4" textAlignment="2" archimateElement="b1f4bc17">
-        <bounds x="696" y="216" width="144" height="397"/>
+        <bounds x="900" y="204" width="181" height="277"/>
+        <child xsi:type="archimate:DiagramObject" id="5ec7a33b" textAlignment="2" archimateElement="8e98f9f2">
+          <bounds x="36" y="120" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="6fad2624" textAlignment="2" archimateElement="caab36c9">
+          <bounds x="36" y="48" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="5b6adad2" textAlignment="2" archimateElement="1117ca39">
+          <bounds x="36" y="192" width="120" height="55"/>
+        </child>
       </child>
       <child xsi:type="archimate:DiagramObject" id="00b9578e" textAlignment="2" archimateElement="e6162ac8">
-        <bounds x="840" y="216" width="157" height="397"/>
+        <bounds x="1104" y="204" width="157" height="229"/>
+        <child xsi:type="archimate:DiagramObject" id="cb05558b" textAlignment="2" archimateElement="72b0a401">
+          <bounds x="24" y="60" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="653d35aa" textAlignment="2" archimateElement="ec565b4d">
+          <bounds x="24" y="132" width="120" height="85"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="006cfb6e" textAlignment="2" archimateElement="bc521aed">
+        <bounds x="216" y="216" width="157" height="193"/>
+        <child xsi:type="archimate:DiagramObject" id="afe93e9a" textAlignment="2" archimateElement="432fa631">
+          <bounds x="24" y="48" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="e2ed19cc" textAlignment="2" archimateElement="dbb06989">
+          <bounds x="24" y="120" width="120" height="55"/>
+        </child>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000011" name="Punto de vista: Co-operación de procesos de negocio">
