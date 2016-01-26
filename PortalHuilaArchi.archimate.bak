@@ -12,7 +12,9 @@
     <element xsi:type="archimate:BusinessActor" id="9b4380b9" name="Turista"/>
     <element xsi:type="archimate:BusinessFunction" id="dcbc9471" name="Almacén"/>
     <element xsi:type="archimate:BusinessProcess" id="6842646e" name="Business Process"/>
-    <element xsi:type="archimate:BusinessActor" id="d320f358" name="Turista"/>
+    <element xsi:type="archimate:BusinessActor" id="d320f358" name="Turista">
+      <documentation>Consumidor de servicios turisticos</documentation>
+    </element>
     <element xsi:type="archimate:BusinessActor" id="fd5103ed" name="MiPyME"/>
     <element xsi:type="archimate:BusinessProcess" id="c76c41df" name="B2C"/>
     <element xsi:type="archimate:BusinessProcess" id="df639313" name="Gestión de Portafolio de Servicios"/>
@@ -93,6 +95,27 @@
 * Información básica: Datos básicos del operador que incluye el nombre, identificación comercial y tributaria, ubicación, categoría y servicios principales.
 * Micrositio: Con información especializada por cada operador incluyendo catálogo de servicios, descripción de productos, características del negocio, ubicación específica de todas las sedes, galerías de imágenes, gestión de interacción con clientes.
 </documentation>
+    </element>
+    <element xsi:type="archimate:BusinessActor" id="fbb913d4" name="Business Actor"/>
+    <element xsi:type="archimate:Product" id="63d1ef11" name="Comercio Electrónico"/>
+    <element xsi:type="archimate:Product" id="0767b350" name="Guía Turística">
+      <documentation>Ofrece la capacidad de registrar atractivos turisticos, agrupándolos por categorías. El turista puede navegar por las diferentes categorías, al seleccionar una de ellas se muestra información relevante así como el listado de proveedores que prestan servicios relacionados.</documentation>
+    </element>
+    <element xsi:type="archimate:Product" id="b3f4cfe6" name="Gestor de Itinerarios">
+      <documentation>El turista puede ir almacenando rutas turísticas, eventos y festividades; y demás servicios de la guía turística para conformar un itinerario. El portal permite gestionar los diferentes elementos que conforman el itinerario de cada turista.
+
+El itinerario debe ser persistente tanto para turistas anónimos como para turistas registrados.</documentation>
+    </element>
+    <element xsi:type="archimate:Product" id="ddbdeb5b" name="Gestor de Actividades">
+      <documentation>Cada prestador de servicios turísticos clasifica sus servicios en diferentes categorías. El portal presenta todas las categorías en la sección de actividades. Cuando el urista selecciona una categoría el portal muestra una descripción de la misma, junto con el listado de prestadores de servicios que tienen servicios registrados en dicha categoría.</documentation>
+    </element>
+    <element xsi:type="archimate:Product" id="4dc2fd41" name="Gestor de Rutas Turísticas">
+      <documentation>Basado en el editor de mapas, el portal ofrece el producto de registrar rutas turísticas. Se concibe una ruta turística como el conjunto organizado de nodos (lugares) de interés turístico que se recorren principalmente de manera secuencial.
+
+El producto enumera los diferentes nodos geolocalizados y presenta la información relevante desde el mismo mapa como en páginas especializadas.</documentation>
+    </element>
+    <element xsi:type="archimate:Product" id="6411089f" name="Gestor de Eventos y Festividades">
+      <documentation>El portal ofrece el servicio de gestión de eventos y festividades en donde se podrán registrar y consultar información básica de eventos así como galerías de fotografías, noticias, ubicación. Los turistas pueden registrar sus impresiones acerca de la información mostrada.</documentation>
     </element>
   </folder>
   <folder name="Application" id="05c823c1" type="application">
@@ -211,6 +234,7 @@
     <element xsi:type="archimate:CompositionRelationship" id="623b8b7b" source="b1f4bc17" target="1117ca39"/>
     <element xsi:type="archimate:CompositionRelationship" id="dfbea72b" source="e6162ac8" target="72b0a401"/>
     <element xsi:type="archimate:CompositionRelationship" id="5eceef2c" source="e6162ac8" target="ec565b4d"/>
+    <element xsi:type="archimate:AggregationRelationship" id="6a1e8ec8" source="ddbdeb5b" target="6411089f"/>
   </folder>
   <folder name="Views" id="59b09918" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" id="5f78b078" name="__Vistas">
@@ -499,7 +523,7 @@ Intention is to hold Technology layer, all aspects</content>
         <content>Viewpoint: Business Function</content>
       </child>
     </element>
-    <element xsi:type="archimate:ArchimateDiagramModel" id="00000009" name="Punto de Vista: Procesos de Negocio" viewpoint="17">
+    <element xsi:type="archimate:ArchimateDiagramModel" id="00000009" name="Punto de Vista: Procesos de Negocio">
       <child xsi:type="archimate:Note" id="00000010" name="Note" textAlignment="1">
         <bounds x="24" y="24" width="169" height="85"/>
         <content>Punto de Vista: Procesos de Negocio</content>
@@ -601,7 +625,29 @@ Intention is to hold Technology layer, all aspects</content>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000013" name="Punto de Vista: Producto">
       <child xsi:type="archimate:Note" id="00000014" name="Note" textAlignment="1">
         <bounds x="24" y="24" width="169" height="85"/>
-        <content>Viewpoint: Product</content>
+        <content>Punto de Vista: Producto</content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="4a2d15d4" textAlignment="2" archimateElement="d320f358">
+        <bounds x="480" y="39" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="bce1879a" textAlignment="2" archimateElement="63d1ef11">
+        <bounds x="36" y="168" width="457" height="49"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="c5e0adb9" textAlignment="2" archimateElement="0767b350">
+        <bounds x="528" y="168" width="457" height="49"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="028a15fa" textAlignment="2" archimateElement="b3f4cfe6">
+        <bounds x="36" y="324" width="457" height="49"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="0a9d3a8b" textAlignment="2" archimateElement="ddbdeb5b">
+        <bounds x="528" y="324" width="457" height="49"/>
+        <sourceConnection xsi:type="archimate:Connection" id="66666f64" source="0a9d3a8b" target="feb908e1" relationship="6a1e8ec8"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="f0dc0aa8" textAlignment="2" archimateElement="4dc2fd41">
+        <bounds x="36" y="432" width="457" height="49"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="feb908e1" textAlignment="2" targetConnections="66666f64" archimateElement="6411089f">
+        <bounds x="528" y="432" width="457" height="49"/>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000015" name="Punto de Vista: Comportamiento de la Aplicación">
@@ -631,7 +677,34 @@ Intention is to hold Technology layer, all aspects</content>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000023" name="Punto de Vista: Infraestructura">
       <child xsi:type="archimate:Note" id="00000024" name="Note" textAlignment="1">
         <bounds x="24" y="24" width="169" height="85"/>
-        <content>Viewpoint: Infrastructure</content>
+        <content>Punto de Vista: Infraestructura</content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="64cddbe5" textAlignment="2" archimateElement="b2441e94">
+        <bounds x="60" y="192" width="829" height="217"/>
+        <child xsi:type="archimate:DiagramObject" id="9d292f44" textAlignment="2" archimateElement="8d0b808f">
+          <bounds x="396" y="48" width="169" height="121"/>
+          <child xsi:type="archimate:DiagramObject" id="7e039111" textAlignment="2" archimateElement="feb629f5">
+            <bounds x="24" y="60" width="120" height="37"/>
+          </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="cebeecb7" textAlignment="2" archimateElement="836ce20d">
+          <bounds x="216" y="48" width="157" height="121"/>
+          <child xsi:type="archimate:DiagramObject" id="f106f826" textAlignment="2" archimateElement="20e0042d">
+            <bounds x="12" y="60" width="121" height="37"/>
+          </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="a682939d" textAlignment="2" archimateElement="5085c333">
+          <bounds x="24" y="48" width="168" height="121"/>
+          <child xsi:type="archimate:DiagramObject" id="06146671" textAlignment="2" archimateElement="f911617d">
+            <bounds x="24" y="60" width="109" height="37"/>
+          </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="384a1ee9" textAlignment="2" archimateElement="5ecf2fb3">
+          <bounds x="600" y="48" width="169" height="121"/>
+          <child xsi:type="archimate:DiagramObject" id="51629b1d" textAlignment="2" archimateElement="0cad9674">
+            <bounds x="24" y="60" width="120" height="37"/>
+          </child>
+        </child>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000025" name="Punto de Vista: uso de Infraestructura">
