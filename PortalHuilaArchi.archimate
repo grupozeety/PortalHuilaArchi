@@ -20,7 +20,9 @@
     <element xsi:type="archimate:BusinessProcess" id="df639313" name="Gestión de Portafolio de Servicios"/>
     <element xsi:type="archimate:BusinessProcess" id="2ae6bbb8" name="Gestión de Itinerarios"/>
     <element xsi:type="archimate:BusinessProcess" id="ed75b7a8" name="Gestión de Sitios Turisticos"/>
-    <element xsi:type="archimate:BusinessProcess" id="0f816bd4" name="Gestión de Turistas"/>
+    <element xsi:type="archimate:BusinessProcess" id="0f816bd4" name="Gestión de Turistas">
+      <documentation>Se encarga del registro y control de datos del turista</documentation>
+    </element>
     <element xsi:type="archimate:BusinessProcess" id="7e27a10e" name="Gestión de MiPyMEs"/>
     <element xsi:type="archimate:BusinessActor" id="36f3fa78" name="Gobernación del Huila"/>
     <element xsi:type="archimate:BusinessRole" id="c3326df7" name="Proveedor de Servicios Turísticos">
