@@ -23,13 +23,15 @@
     <element xsi:type="archimate:BusinessProcess" id="0f816bd4" name="Gestión de Turistas"/>
     <element xsi:type="archimate:BusinessProcess" id="7e27a10e" name="Gestión de MiPyMEs"/>
     <element xsi:type="archimate:BusinessActor" id="36f3fa78" name="Gobernación del Huila"/>
-    <element xsi:type="archimate:BusinessRole" id="c3326df7" name="Proveedor de Servicios Turísticos">
+    <element xsi:type="archimate:BusinessRole" id="c3326df7" name="Prestador de Servicios Turísticos">
       <documentation>Un proveedor de servicios turísticos es una MiPyME que ofrece servicios potencialmente útlies dentro de la cadena de valor turística.</documentation>
     </element>
-    <element xsi:type="archimate:BusinessRole" id="9b2cefe5" name="Proveedor de Servicios de Comida"/>
+    <element xsi:type="archimate:BusinessRole" id="9b2cefe5" name="Proveedor de Servicios Gastronómicos"/>
     <element xsi:type="archimate:BusinessRole" id="617ca755" name="Proveedor de Servicios de Tiendas de Compras"/>
-    <element xsi:type="archimate:BusinessRole" id="aadb899b" name="Proveedor de Servicios de Acomodación"/>
-    <element xsi:type="archimate:BusinessRole" id="07cfbc00" name="Proveedor de Servicios de Planificación de Viajes"/>
+    <element xsi:type="archimate:BusinessRole" id="aadb899b" name="Proveedor de Servicios de Hospedaje y Alojamiento"/>
+    <element xsi:type="archimate:BusinessRole" id="07cfbc00" name="Proveedor de Servicios de Planificación de Viajes">
+      <documentation>MiPyME encargada de diseñar, ofrecer, comercializar y gestionar paquetes turísticos. El representante más relevante de esta categoría son las agencias de viajes.</documentation>
+    </element>
     <element xsi:type="archimate:BusinessRole" id="82bbecaa" name="Proveedor de Servicios de Transporte"/>
     <element xsi:type="archimate:BusinessFunction" id="35caab9a" name="Compr"/>
     <element xsi:type="archimate:BusinessRole" id="ff9ef8d8" name="Oficina Frontal"/>
@@ -97,7 +99,9 @@
 </documentation>
     </element>
     <element xsi:type="archimate:BusinessActor" id="fbb913d4" name="Business Actor"/>
-    <element xsi:type="archimate:Product" id="63d1ef11" name="Comercio Electrónico"/>
+    <element xsi:type="archimate:Product" id="63d1ef11" name="Comercio Electrónico">
+      <documentation>Capacidad de realizar transacciones comerciales en línea, incluyendo cotizaciones, compra de productos, seguimiento a pedidos, pagos y entregas</documentation>
+    </element>
     <element xsi:type="archimate:Product" id="0767b350" name="Guía Turística">
       <documentation>Ofrece la capacidad de registrar atractivos turisticos, agrupándolos por categorías. El turista puede navegar por las diferentes categorías, al seleccionar una de ellas se muestra información relevante así como el listado de proveedores que prestan servicios relacionados.</documentation>
     </element>
@@ -117,6 +121,11 @@ El producto enumera los diferentes nodos geolocalizados y presenta la informaci�
     <element xsi:type="archimate:Product" id="6411089f" name="Gestor de Eventos y Festividades">
       <documentation>El portal ofrece el servicio de gestión de eventos y festividades en donde se podrán registrar y consultar información básica de eventos así como galerías de fotografías, noticias, ubicación. Los turistas pueden registrar sus impresiones acerca de la información mostrada.</documentation>
     </element>
+    <element xsi:type="archimate:BusinessRole" id="5b784b22" name="Proveedor de Servicios de Operación de Congresos, Ferias y Convenciones"/>
+    <element xsi:type="archimate:BusinessRole" id="b905de37" name="Proveedor de Servicios de Actividades Turísticas">
+      <documentation>Categoría amplia que incluye a los prestadores de servicios turísitcos relacionados con varias actividades turísitcas especialziadas: cabalgatas, parapente, rafting, etc. Se incluye como actividad turística el servicio de Guía Turística.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" id="a011f0bf" name="Proveedor de Servicios de Bar"/>
   </folder>
   <folder name="Application" id="05c823c1" type="application">
     <folder name="Behaviour" id="47f3256b"/>
@@ -157,6 +166,8 @@ El producto enumera los diferentes nodos geolocalizados y presenta la informaci�
     <element xsi:type="archimate:SystemSoftware" id="862725b9" name="Joomla"/>
     <element xsi:type="archimate:SystemSoftware" id="29a341e3" name="LinOTP"/>
     <element xsi:type="archimate:SystemSoftware" id="7273cbc9" name="PostgreSQL"/>
+    <element xsi:type="archimate:InfrastructureService" id="c9a4c45f" name="Base de Datos"/>
+    <element xsi:type="archimate:InfrastructureService" id="e5b9528e" name="Autenticación"/>
   </folder>
   <folder name="Motivation" id="73826f6a" type="motivation">
     <element xsi:type="archimate:Stakeholder" id="c831f051" name="INFIHUILA"/>
@@ -241,6 +252,11 @@ El producto enumera los diferentes nodos geolocalizados y presenta la informaci�
     <element xsi:type="archimate:AssociationRelationship" id="2df02ee5" source="d320f358" target="ddbdeb5b"/>
     <element xsi:type="archimate:AssociationRelationship" id="13946cad" source="d320f358" target="4dc2fd41"/>
     <element xsi:type="archimate:AssociationRelationship" id="0bde4fd9" source="d320f358" target="6411089f"/>
+    <element xsi:type="archimate:RealisationRelationship" id="6d444438" source="836ce20d" target="c9a4c45f"/>
+    <element xsi:type="archimate:RealisationRelationship" id="4223f1bb" source="5ecf2fb3" target="e5b9528e"/>
+    <element xsi:type="archimate:CompositionRelationship" id="274fffc7" source="c3326df7" target="5b784b22"/>
+    <element xsi:type="archimate:CompositionRelationship" id="21fc6bca" source="c3326df7" target="b905de37"/>
+    <element xsi:type="archimate:CompositionRelationship" id="adc2b123" source="c3326df7" target="a011f0bf"/>
   </folder>
   <folder name="Views" id="59b09918" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" id="5f78b078" name="__Vistas">
@@ -451,7 +467,7 @@ Intention is to hold Technology layer, all aspects</content>
         <content>Punto de Vista: Organización</content>
       </child>
       <child xsi:type="archimate:DiagramObject" id="0d8a2d54" textAlignment="2" archimateElement="c3326df7">
-        <bounds x="12" y="72" width="685" height="673"/>
+        <bounds x="12" y="72" width="793" height="673"/>
         <child xsi:type="archimate:DiagramObject" id="4d24e74d" textAlignment="2" archimateElement="07cfbc00">
           <bounds x="72" y="36" width="145" height="109"/>
         </child>
@@ -468,38 +484,47 @@ Intention is to hold Technology layer, all aspects</content>
           <bounds x="252" y="168" width="145" height="109"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="c0dab8ad" textAlignment="2" archimateElement="805126ac">
-          <bounds x="72" y="288" width="577" height="61"/>
+          <bounds x="72" y="288" width="673" height="61"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="61d29c78" textAlignment="2" archimateElement="691398b0">
-          <bounds x="72" y="360" width="577" height="121"/>
+          <bounds x="72" y="360" width="673" height="121"/>
           <child xsi:type="archimate:DiagramObject" id="bfb690cb" textAlignment="2" archimateElement="8baf4bce">
-            <bounds x="408" y="36" width="120" height="55"/>
+            <bounds x="480" y="36" width="120" height="55"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="0110635f" textAlignment="2" archimateElement="689ef52f">
-            <bounds x="240" y="36" width="120" height="55"/>
+            <bounds x="312" y="36" width="120" height="55"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="7749536a" textAlignment="2" archimateElement="d4a3b82d">
-            <bounds x="36" y="36" width="120" height="55"/>
+            <bounds x="108" y="36" width="120" height="55"/>
           </child>
         </child>
         <child xsi:type="archimate:DiagramObject" id="3b6ee4e1" textAlignment="2" archimateElement="afcfc3ec">
-          <bounds x="72" y="492" width="577" height="163"/>
+          <bounds x="72" y="492" width="673" height="163"/>
           <child xsi:type="archimate:DiagramObject" id="52ea8557" textAlignment="2" archimateElement="78941b41">
-            <bounds x="168" y="96" width="240" height="55"/>
+            <bounds x="228" y="96" width="240" height="55"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="0d302780" textAlignment="2" archimateElement="20f470ec">
-            <bounds x="228" y="24" width="120" height="55"/>
+            <bounds x="288" y="24" width="120" height="55"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="d8013a71" textAlignment="2" archimateElement="e3fa46b0">
-            <bounds x="396" y="24" width="120" height="55"/>
+            <bounds x="456" y="24" width="120" height="55"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="73547bbc" textAlignment="2" archimateElement="8a7aed55">
-            <bounds x="12" y="24" width="120" height="55"/>
+            <bounds x="72" y="24" width="120" height="55"/>
           </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="d86ecd3a" textAlignment="2" archimateElement="5b784b22">
+          <bounds x="432" y="168" width="145" height="109"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="dac51aca" textAlignment="2" archimateElement="b905de37">
+          <bounds x="600" y="168" width="145" height="109"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="2993d461" textAlignment="2" archimateElement="a011f0bf">
+          <bounds x="600" y="36" width="145" height="109"/>
         </child>
       </child>
       <child xsi:type="archimate:DiagramObject" id="c4f03416" textAlignment="2" archimateElement="28dbc124">
-        <bounds x="720" y="72" width="529" height="361"/>
+        <bounds x="924" y="60" width="529" height="361"/>
         <child xsi:type="archimate:DiagramObject" id="43a91e58" textAlignment="2" archimateElement="f7bdd12d">
           <bounds x="36" y="60" width="145" height="109"/>
         </child>
@@ -643,7 +668,7 @@ Intention is to hold Technology layer, all aspects</content>
         <sourceConnection xsi:type="archimate:Connection" id="390632cd" source="4a2d15d4" target="feb908e1" relationship="0bde4fd9"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="bce1879a" textAlignment="2" targetConnections="03c0dbf9" archimateElement="63d1ef11">
-        <bounds x="12" y="168" width="445" height="49"/>
+        <bounds x="12" y="168" width="445" height="97"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="c5e0adb9" textAlignment="2" targetConnections="62e302f9" archimateElement="0767b350">
         <bounds x="624" y="168" width="457" height="49"/>
@@ -692,7 +717,7 @@ Intention is to hold Technology layer, all aspects</content>
         <content>Punto de Vista: Infraestructura</content>
       </child>
       <child xsi:type="archimate:DiagramObject" id="64cddbe5" textAlignment="2" archimateElement="b2441e94">
-        <bounds x="60" y="192" width="829" height="217"/>
+        <bounds x="84" y="312" width="829" height="217"/>
         <child xsi:type="archimate:DiagramObject" id="9d292f44" textAlignment="2" archimateElement="8d0b808f">
           <bounds x="396" y="48" width="169" height="121"/>
           <child xsi:type="archimate:DiagramObject" id="7e039111" textAlignment="2" archimateElement="feb629f5">
@@ -701,6 +726,7 @@ Intention is to hold Technology layer, all aspects</content>
         </child>
         <child xsi:type="archimate:DiagramObject" id="cebeecb7" textAlignment="2" archimateElement="836ce20d">
           <bounds x="216" y="48" width="157" height="121"/>
+          <sourceConnection xsi:type="archimate:Connection" id="d6f0f77e" source="cebeecb7" target="f94b2947" relationship="6d444438"/>
           <child xsi:type="archimate:DiagramObject" id="f106f826" textAlignment="2" archimateElement="20e0042d">
             <bounds x="12" y="60" width="121" height="37"/>
           </child>
@@ -713,10 +739,17 @@ Intention is to hold Technology layer, all aspects</content>
         </child>
         <child xsi:type="archimate:DiagramObject" id="384a1ee9" textAlignment="2" archimateElement="5ecf2fb3">
           <bounds x="600" y="48" width="169" height="121"/>
+          <sourceConnection xsi:type="archimate:Connection" id="396915c8" source="384a1ee9" target="a6951434" relationship="4223f1bb"/>
           <child xsi:type="archimate:DiagramObject" id="51629b1d" textAlignment="2" archimateElement="0cad9674">
             <bounds x="24" y="60" width="120" height="37"/>
           </child>
         </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="f94b2947" textAlignment="2" targetConnections="d6f0f77e" archimateElement="c9a4c45f">
+        <bounds x="312" y="132" width="145" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="a6951434" textAlignment="2" targetConnections="396915c8" archimateElement="e5b9528e">
+        <bounds x="708" y="132" width="144" height="55"/>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000025" name="Punto de Vista: uso de Infraestructura">
@@ -728,7 +761,7 @@ Intention is to hold Technology layer, all aspects</content>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000027" name="Punto de Vista: Implementación y Despliegue">
       <child xsi:type="archimate:Note" id="00000028" name="Note" textAlignment="1">
         <bounds x="24" y="24" width="169" height="85"/>
-        <content>Viewpoint: Implementation and Deployment</content>
+        <content>Punto de Vista: Implementación y Despliegue</content>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000029" name="Punto de Vista:Estructura de Información">
@@ -740,7 +773,7 @@ Intention is to hold Technology layer, all aspects</content>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000031" name="Punto de Vista: Realización del servicio">
       <child xsi:type="archimate:Note" id="00000032" name="Note" textAlignment="1">
         <bounds x="24" y="24" width="169" height="85"/>
-        <content>Viewpoint: Service Realization</content>
+        <content>Punto de Vista: realización del Servicio</content>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="00000033" name="Punto de Vista: Capas">
